@@ -1,0 +1,609 @@
+Ex No: 1 			
+BASIC UNIX COMMANDS
+
+1.1 GENERAL PURPOSE COMMANDS
+1. The ‘date’ command:
+The date command display the current date with day of week, month, day, time (24 hours clock) and the year.
+SYNTAX:  $ date
+	The date command can also be used with following format.
+Format	Purpose	Example
++ %m	To display only month	$ date + %m
++ %h	To display month name	$ date + %h
++ %d	To display day of  month 	$ date + %d
++ %y	To display last two digits of the year	$ date + %y
++ %H	To display Hours	$ date + %H
++ %M	To display Minutes	$ date + %M
++ %S	To display Seconds	$ date + %S
+	
+
+
+
+
+
+
+
+
+
+2.  The echo’command:
+The echo command is used to print the message on the screen.
+SYNTAX:  $ echo
+EXAMPLE: $ echo “God is Great”
+3. The ‘cal’ command:
+The cal command displays the specified month or year calendar.
+SYNTAX:  $ cal [month] [year]
+EXAMPLE: $ cal Jan 2012
+4. The ‘bc’ command:
+	Unix offers an online calculator and can be invoked by the command bc.
+SYNTAX:  $ bc
+5.  The ‘who’ command
+The who command is used to display the data about all the users who are currently logged into the system.
+SYNTAX:  $ who
+6.  The ‘who am i’ command
+The who am i command displays data about login details of the user.
+SYNTAX:  $ who am i
+7.  The ‘id’ command
+The id command displays the numerical value corresponding to your login.
+SYNTAX:  $ id
+8.  The ‘tty’ command
+The tty (teletype) command is used to know the terminal name that we are using.
+SYNTAX:  $ tty
+9.  The ‘clear’ command
+The clear command is used to clear the screen of your terminal.
+SYNTAX:  $ clear
+10.  The ‘man’ command
+The man command gives you complete access to the Unix commands.
+SYNTAX:  $ man [command]
+11.  The ‘ps’ command
+The ps command is used to the process currently alive in the machine with the 'ps' (process status) command, which displays information about process that are alive when you run the command. 'ps;' produces a snapshot of machine activity.
+SYNTAX:  $ ps
+12.  The ‘uname’ command
+The uname command is used to display relevant details about the operating system on the standard output.
+-m -> Displays the machine id (i.e., name of the system hardware)
+-n -> Displays the name of the network node. (host name)
+-r -> Displays the release number of the operating system.
+-s -> Displays the name of the operating system (i.e.. system name)
+-v -> Displays the version of the operating system.
+-a -> Displays the details of all the above five options.
+SYNTAX:  $ uname [option]
+13.  The ‘finger’ command
+The finger command with an argument gives you more information about the user. The finger command followed by an argument can give complete information for a user who is not logged onto the system.
+SYNTAX:  $ finger [user-name]
+EXAMPLE: $ finger eee61
+
+1.2 DIRECTORY COMMANDS
+1. The ‘pwd’ command:
+The pwd (print working directory) command displays the current working directory.
+SYNTAX:  $ pwd
+2. The ‘mkdir’ command:
+The mkdir is used to create an empty directory in a disk.
+SYNTAX:  $ mkdir dirname
+EXAMPLE: $ mkdir receee
+3. The ‘rmdir’ command:
+The rmdir is used to remove a directory from the disk. Before removing a directory, the directory must be empty (no files and directories).
+SYNTAX:  $ rmdir dirname
+EXAMPLE: $ rmdir receee
+4. The ‘cd’ command:
+The cd command is used to move from one directory to another.
+SYNTAX:  $ cd dirname
+EXAMPLE: $ cd receee
+5. The ‘ls’ command:
+The ls command displays the list of files in the current working directory. 
+SYNTAX:  $ ls
+
+1.3 FILE HANDLING COMMANDS
+1. The ‘cat’ command:
+The cat command is used to create a file.
+SYNTAX:  $ cat > filename
+EXAMPLE: $ cat > rec
+2. The ‘Display contents of a file’ command:
+The cat command is also used to view the contents of a specified file.
+SYNTAX:  $ cat filename
+
+3. The ‘cp’ command:
+The cp command is used to copy the contents of one file to another and copies the file from one place to another.
+SYNTAX:  $ cp oldfile newfile
+EXAMPLE: $ cp cse ece
+4. The ‘rm’ command:
+The rm command is used to remove or erase an existing file
+SYNTAX:  $ rm filename
+EXAMPLE: $ rm rec
+5. The ‘mv’ command:
+The mv command is used to move a file from one place to another. It removes a specified file from its original location and places it in specified location.
+SYNTAX:  $ mv oldfile newfile
+EXAMPLE: $ mv cse eee
+6. The ‘file’ command:
+The file command is used to determine the type of file.
+SYNTAX:  $ file filename
+EXAMPLE: $ file receee
+7. The ‘wc’ command:
+The wc command is used to count the number of words, lines and characters in a file.
+SYNTAX:  $ wc filename
+EXAMPLE: $ wc receee
+8. The ‘Directing output to a file’ command:
+	The ls command lists the files on the terminal (screen). Using the redirection operator ‘>’ we can send the output to file instead of showing it on the screen.
+SYNTAX:  $ ls > filename
+EXAMPLE: $ ls > cseeee
+9. The ‘pipes’ command:
+	The Unix allows us to connect two commands together using these pipes. A pipe ( | )  is an mechanism by which the output of one command can be channeled into the input of another command.
+SYNTAX:  $ command1 | command2
+EXAMPLE: $ who | wc –l
+
+10. The ‘tee’ command:
+	While using pipes, we have not seen any output from a command that gets piped into another command. To save the output, which is produced in the middle of a pipe, the tee command is very useful.
+SYNTAX:  $ command | tee filename
+EXAMPLE: $ who | tee sample | wc -l
+11. The ‘Metacharacters of unix’ command:
+	Metacharacters are special characters that are at higher and abstract level compared to most of other characters in Unix. The shell understands and interprets these metacharacters in a special way.
+* -  Specifies number of characters
+?- Specifies a single character
+[ ]- used to match a whole set of file names at a command line.
+! – Used to Specify Not
+EXAMPLE: 
+	$ ls r** - Displays all the files whose name begins with ‘r’
+	$ ls ?kkk - Displays the files which are having ‘kkk’, from the second characters 					irrespective of the first character.
+	$ ls [a-m] – Lists the files whose names begins alphabets from ‘a’ to ‘m’
+	$ ls [!a-m] – Lists all files other than files whose names begins alphabets from ‘a’ to ‘m’
+12. The ‘File permissions’ command:
+	File permission is the way of controlling the accessibility of file for each of three users namely Users, Groups  and  Others.
+ 	There are three types of file permissions are available, they are
+				
+	
+
+The permissions for each file can be divided into three parts of three bits each.
+First three bits	Owner of the file
+Next three bits	Group to which owner of the file belongs
+Last three bits	Others
+		
+
+
+EXAMPLE: $ ls college
+-rwxr-xr--	1	Lak	std	1525	jan10	12:10	college
+Where,
+-rwx    The file is readable, writable and executable by the owner of the file.
+ Lak     Specifies Owner of the file.
+ r-x      Indicates the absence of the write permission by the Group owner of the file.
+ Std     Is the Group Owner of the file.
+r--      Indicates read permissions for others.
+13. The ‘chmod’ command:
+	The chmod command is used to set the read, write and execute permissions for all categories of users for file.
+SYNTAX:  $ chmod category operation permission file
+Category	Operation	permission
+u-users	+ assign	r-read
+g-group	-Remove	w-write
+o-others	= assign absolutely	x-execute
+a-all		
+
+
+
+
+
+
+
+EXAMPLE:
+$ chmod u –wx college
+	Removes write & execute permission for users for ‘college’ file.
+$ chmod u +rw, g+rw college
+	Assigns read & write permission for users and groups for ‘college’ file.
+$ chmod g=wx college
+Assigns absolute permission for groups of all read, write and execute permissions for  ‘college’ file.
+
+14. The ‘Octal Notations’ command:
+	The file permissions can be changed using octal notations also. The octal notations for file permission are
+Read permission	4
+Write permission	2
+Execute permission	1
+
+EXAMPLE:
+$ chmod 761 college
+	Assigns all permission to the owner, read and write permissions to the group and only executable permission to the others for ‘college’ file.
+
+1.4 GROUPING COMMANDS
+1. The ‘semicolon’ command:
+	The semicolon(;) command is used to separate multiple commands at the command line.
+SYNTAX:  $ command1;command2;command3…………….;commandn
+EXAMPLE: $ who;date
+2. The ‘&&’ operator:
+	The ‘&&’ operator signifies the logical AND operation in between two or more valid Unix commands.It means that only if the first command is successfully executed, then the next command will executed.
+SYNTAX:  $ command1 && command && command3…………….&&commandn
+EXAMPLE: $ who && date
+3. The ‘||’ operator:
+	The ‘||’ operator signifies the logical OR operation in between two or more valid Unix commands.It means, that only if the first command will happen to be un successfully,it will continue to execute next commands.
+SYNTAX:  $ command1 || command || command3…………….||commandn
+EXAMPLE: $ who || date
+1.5 FILTERS
+1. The head filter
+	It displays the first ten lines of a file.
+SYNTAX:  $ head filename
+EXAMPLE: $ head college			Display the top ten lines.
+		$ head -5 college		Display the top five lines.
+2. The tail filter
+	It displays ten lines of a file from the end of the file.
+SYNTAX:  $ tail filename
+EXAMPLE: $ tail college			Display the last ten lines.
+		$tail -5 college			Display the last five lines.
+3. The pg filter:
+	The pg command shows the file page by page.
+SYNTAX:  $ ls –l | pg
+4. The ‘grep’ command:
+	This command is used to search for a particular pattern from a file or from the standard input and display those lines on the standard output. “Grep” stands for “global search for regular expression.”
+SYNTAX:  $ grep [pattern] [file_name]
+EXAMPLE: $  cat > student
+Arun cse
+Ram ece
+Kani cse
+$  grep “cse”  student
+ Arun cse
+Kani cse
+5. The ‘sort’ command:
+	The sort command is used to sort the contents of a file. The sort command reports only to the screen, the actual file remains unchanged.
+SYNTAX:  $ sort filename
+EXAMPLE: $  sort college
+OPTIONS:
+Command	Purpose
+Sort –r college	Sorts and displays the file contents in reverse order
+Sort –c college	Check if the file is sorted
+Sort –n college	Sorts numerically
+Sort –m college	Sorts numerically in reverse order
+Sort –u college	Remove duplicate records
+Sort –l college	Skip the column with +1 (one) option.Sorts according to second column
+
+
+6. The ‘uniq’ command:
+	In any enterprise data processing environment, there is often a duplicate entry creeping in due to faulty data entry. We just saw how sort removes them the –u option. Unix offers a special tool to handle these records
+SYNTAX:  $ uniq filename
+EXAMPLE: $  cat > student
+Arun cse
+Arun cse
+Ram ece
+Ram ece
+Kani cse
+San cse
+
+$  uniq student
+Arun cse
+Ram ece
+Kani cse
+San cse
+7. The ‘nl’ command:
+	The nl filter adds lines numbers to a file and it displays the file and not provides access to edit but simply displays the contents on the screen.
+SYNTAX:  $ nl filename
+EXAMPLE: $  nl college
+8. The ‘cut’ command:
+	We can select specified fields from a line of text using cut command.
+SYNTAX:  $ cut -c filename
+EXAMPLE: $ cut -c college
+OPTION:
+	-c – Option cut on the specified character position from each line.
+
+
+
+
+
+                        BASIC LINUX COMMANDS
+
+1.	DATE COMMAND
+		
+1)	Syntax: $date 
+	   Output: Thu Jan 8 08:23:01 IST 2015
+           	       
+	2) Syntax: $date +%m
+	   Output:	01
+           	       
+3) Syntax: $date +%h
+Output: Jan
+                       
+4) Syntax: $date +%d
+   Output: 08
+                       
+5) Syntax: $date +%H
+   Output: 08
+                       
+6) Syntax: $date +%M
+   Output: 25
+                       
+7) Syntax: $date +%S
+   Output: 42
+                       
+8) Syntax: $date +%Y
+   Output: 15
+
+2. ECHO COMMAND
+	   Syntax: $echo rec
+	   Output: rec
+         
+3. CALENDAR COMMAND
+        
+   Syntax: $cal 10 1995              
+   
+   Output:   Su Mo Tu We Th Fr Sa
+                               1  2  3 
+                   4  5  6  7  8  9  10 
+                   11 12 13 14 15 16 17 
+                   18 19 20 21 22 23 24 
+                   25 26 27 28 29 30 31 
+
+4. ONLINE CALCULATOR
+	   
+	   Syntax: $bc
+	   
+   Output: bc 1.06.95
+                 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.This is free software with ABSOLUTELY NO WARRANTY. For details type `warranty'
+ 
+5 + 7
+12
+5 * 7
+35
+
+
+5. WHO
+		Syntax: $who
+Output: rec      :0           2015-01-08 08:08 (:0)
+ 		        rec      pts/0        2015-01-08 08:13 (:0)
+
+6. WHO AM I
+		Syntax: $who am i
+Output: rec      pts/0        2015-01-08 08:13 (:0)
+
+7. ID
+		Synatx: $id
+Output: uid=1640(rec) gid=1640(rec) groups=1640(rec)                   			  context=unconfined_u:unconfined_r:unconfined_t:
+        s0-s0:c0.c1023
+
+8. TTY
+		Syntax: $tty
+		Output: /dev/pts/0
+
+9. CLEAR
+		Syntax: $clear
+		Output: clears the screen
+
+10. MAN
+		Syntax: $man who
+		
+	      Output: 
+		
+		NAME
+           	who - show who is logged on
+
+           SYNOPSIS
+            who [OPTION]... [ FILE | ARG1 ARG2 ]
+
+           DESCRIPTION
+            Print information about users who are currently logged in.
+
+           -a, --all
+              same as -b -d --login -p -r -t -T -u
+
+           -b, --boot
+              time of last system boot
+
+           -d, --dead
+              print dead processes
+
+           -H, --heading
+              print line of column headings
+
+11. PROCESS STATUS
+		Syntax: $ps
+		Output: PID   TTY         TIME  CMD
+        		  2774  pts/0    00:00:00 bash
+        		  3821  pts/0    00:00:00 ps
+
+
+
+
+12. UNAME COMMANDS
+
+	1) Syntax: $uname –m
+	   Output: i686
+                  
+	2) Syntax: $uname –n
+	   Output: hdc1306028
+                  
+	3) Syntax: $uname –r
+	   Output: 3.11.10-301.fc20.i686+PAE
+                  
+	4) Syntax: $uname –s
+	   Output: Linux
+                  
+	5) Syntax: $uname –v
+	   Output: #1 SMP Thu Dec 5 14:12:06 UTC 2013
+                  
+	6) Syntax: $uname –a
+	   Output: Linux hdc1306028 3.11.10-301.fc20.i686+PAE #1 SMP Thu 		      Dec 5 14:12:06 UTC 2013 i686 i686 i386 GNU/Linux
+
+13. FINGER COMMAND
+	  Syntax: $finger
+	  Output:
+
+Login  Name    Tty      Idle  Login Time   Office  Office Phone   Host
+rec    rec     *:0            Jan 8 08:08                         (:0)
+rec    rec    pts/0           Jan 8 08:13                         (:0)
+
+14. DIRECTORY COMMANDS
+
+	1) Syntax: $mkdir folder name
+	   Output: The directory is created.
+                   
+	2) Syntax: $cd folder name
+	   Output: It has entered into the directory.
+                  
+	3) Syntax: $cd\
+	   Output: It has come out of the directory.
+                   
+	4) Syntax: $ls
+	   Output: Desktop    Downloads  Pictures   Templates
+                 Documents   Music      Public      Videos
+                   
+	5) Syntax: $rmdir folder name
+	   Output: The directory is removed.
+
+
+15. FILE COMMANDS
+
+	1) Syntax: $cat > filename
+	   Output: The file is created.
+
+	2) Syntax: $vi filename
+	   Output: hi am aa...
+			~                                                                               
+			~                                                                              
+			"aa1" 1L, 12C
+	3) Syntax: $cp [source][destination]
+	   Output: copied to newfile.
+           	      hi am aa...
+			~                                                                               
+			~                                                                               
+			~                                                                               
+			~                                                                               
+			~                                   
+			"aa2" 1L, 12C
+     
+	4) Syntax: $cat [source][destination]       
+	   Output:	 hi am aa...
+                  how r u
+                  hi am aa...
+       
+	5) Syntax: $cat [source][destination]> filename
+         Output: hi am aa...
+                 how r u
+                 hi am aa...
+       
+	6) Syntax: $mv [source][destination]
+	   Output:  hi am aa...
+                  how r u
+       
+	7) Syntax: $rm filename
+	   Output: The file is removed
+
+      8) Syntax: $file [filename]
+	   Output: aa: ASCII text
+       
+	9) Syntax: $ls|wc
+	   Output: 13   13   89
+       
+	10) Syntax: $wc filename
+	    Output: 10      10      74
+       
+	11) Syntax: $ls|tee filename
+	    Output: Desktop
+		  	 Documents
+		  	 Downloads
+		  	 Music
+		  	 Pictures
+		  	 Public
+		  	 Templates
+		  	 Videos
+
+16. META CHARACTER COMMANDS
+             
+	1) Syntax: $ls D*
+	   Output: Desktop
+		  	Documents
+		  	Downloads
+
+                 
+	2) Syntax: $ls aa?
+	   Output:  aa1
+		      aa2
+             
+	3) Syntax: $ls[a-f]
+	   Output: b
+		     c
+             
+	4) Syntax: $ls[a-f]*
+	   Output: Desktop
+		  	Documents
+		  	Downloads
+	5) Syntax: $ls ![a-f]*
+	   Output: No such files/directory.
+
+17. PERMISSION COMMANDS
+           
+	1) Syntax: Esc & i
+	   Output:  To insert into a file.
+
+	2) Syntax: Esc & :wq / Esc & :zz
+	   Output:  To save the contents and quit.
+           
+	3) Syntax: Esc & :q!
+	   Output: Quits with a warning message.
+           
+	4) Syntax: Esc & :q  
+	   Output: Quits without saving.
+           
+	5) Syntax: $who;ls
+	   Output:  rec      :0           2015-01-08 08:08 (:0)
+                  rec      pts/0        2015-01-08 09:27 (:0)
+               
+			Desktop    Downloads  Pictures  aa   Templates
+			Documents  Music      Public    aa2  Videos
+           
+	6) Syntax: $who&&ls
+	   Output:  rec      :0           2015-01-08 08:08 (:0)
+              	 rec      pts/0        2015-01-08 09:27 (:0)
+            
+			 Desktop    Downloads  Pictures  aa   Template
+			 Documents  Music      Public    aa2  Videos
+           
+	7) Syntax: $who||ls
+	   Output: rec      :0           2015-01-08 08:08 (:0)
+              	rec      pts/0        2015-01-08 09:27 (:0)
+  
+	8) Syntax: $head -2 filename
+	   Output: hi am aa...
+                 how r u
+          
+	9) Syntax: $tail -2 filename
+	   Output: This is rec
+                 Welcomes you..
+           
+	10) Syntax: $grep how filename
+	    Output: how r u
+
+	
+
+
+
+	11) Syntax: $sort filename
+	    Output: hi am aa...
+			 how r u
+			This is rec
+                 Welcomes you..
+
+	12) Syntax: $uniq filename
+	    Output: hi am aa...
+			 how r u
+			This is rec
+                 Welcomes you..
+
+	13) Syntax: $nl filename
+	    Output:   1. hi am aa...
+2. how r u
+3. This is rec
+4. Welcomes you..
+
+
+	14) Syntax: $ls-l
+	    Output: drwxr-xr-x. 2 rec rec 4096 Jan  8 10:12 Desktop
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Documents
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Downloads
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Music
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Pictures
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Public
+			drwxrwxr-x. 2 rec rec 4096 Jan  8 09:08 aa
+			-rw-rw-r--. 1 rec rec   30 Jan  8 10:13 aa2
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Templates
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Videos
+            
+	15) Syntax: $chmod g –w aa2
+ 	    Output: drwxr-xr-x. 2 rec rec 4096 Jan  8 10:16 Desktop
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Documents
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Downloads
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Music
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Pictures
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Public
+			drwxrwxr-x. 2 rec rec 4096 Jan  8 09:08 aa
+			-r--r--r--. 1 rec rec   30 Jan  8 10:13 aa2
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Templates
+			drwxr-xr-x. 2 rec rec 4096 Jan  8 08:08 Videos
