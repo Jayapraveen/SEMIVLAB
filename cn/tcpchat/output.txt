@@ -1,0 +1,33 @@
+OUTPUT	TCP chat SERVER
+
+[net113@linuxlab113]$gcc-otpstpserver.c
+[net113@linuxlab113]$./tps4455
+
+SocketSuccessfullyCreated
+Msgrecievedatserver:hi
+Enterthemessagetobesenthello
+Msgrecievedatserver:howareyou
+Enterthemessagetobesentfinetoo
+Msgrecievedatserver:hmm
+Enterthemessagetobesentstop
+[net113@linuxlab113]$
+
+
+OUTPUT	TCP chat CLIENT
+
+[net113@linuxlab113]$gcc-otpctpclient.c
+[net113@linuxlab113]$./tpc4455localhost
+
+Socketsuccessfullycreated
+Pleaseenterthemessage hi
+Serverecho'smessagehello
+Pleaseenterthemessage howareyou
+Serverecho'smessagefinetoo
+Pleaseenterthemessage hmm
+Serverecho'smessagestop
+[net113@linuxlab113]$
+
+
+
+RESULT:
+Thus a C program to implement TCP chat server and client was verified successfully

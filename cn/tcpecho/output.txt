@@ -1,0 +1,36 @@
+OUTPUT	TCP echo SERVER
+[net113@linuxlab113]$gcc-os9server.c
+[net113@linuxlab113]$./s91122
+
+SocketSuccessfullyCreated
+Msgrecievedatserver:hai
+Msgrecievedatserver:hello
+Msgrecievedatserver:howareyou
+Msgrecievedatserver:stop
+[net113@linuxlab113]$
+
+OUTPUT	TCP echo CLIENT
+
+[net113@linuxlab113]$gcc-oc9client.c
+[net113@linuxlab113]$./c91122localhost
+Socketsuccessfullycreated
+Pleaseenterthemessage hai
+Serverecho'smessagehai
+Pleaseenterthemessage hello
+Serverecho'smessagehello
+Pleaseenterthemessage howareyou
+Serverecho'smessagehowareyou
+Pleaseenterthemessage stop
+Serverecho'smessagestop
+[net113@linuxlab113]$
+
+
+
+
+
+
+
+
+RESULT:
+	Thus the program to implement TCP Echo Server and Echo Client has been executed and output verified successfully. 
+

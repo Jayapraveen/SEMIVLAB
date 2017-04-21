@@ -1,0 +1,25 @@
+./ serv 2000
+frame no   data
+0  a
+1  b
+2  csending late ack
+
+3 data4 e
+5 frame6 g
+7 h
+8 i
+
+//server
+./cli 127.0.0.1 2000
+
+connected like to introduce error y or n
+frame no    data
+0  a
+1  b
+2  c
+3  d
+4  e
+5  f
+6  g
+7  h
+8  i

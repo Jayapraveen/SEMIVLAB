@@ -1,0 +1,45 @@
+OUTPUT	SLIDING WINDOW SERVER
+[net113@linuxlab ~]$ gcc -o sl sliss.c
+[net113@linuxlab ~]$ ./sl 8246
+Socket Successfully Created 
+Enter the text: Networks
+Transmitting frames 0123
+Received error in 2
+Retransmitting the frame 23
+Transmitting frames 4567
+Transmission success
+Exiting
+[net113@linuxlab ~]$ 
+
+
+OUTPUT	SLIDING WINDOW CLIENT
+
+[net113@linuxlab ~]$ gcc -o s2 slic.c
+[net113@linuxlab ~]$ ./s2 8246 localhost
+Socket successfully created
+Received Netw0123
+Do you want to report error (1-yes, 0-no)1
+Enter the sequence no. of frames where errors have occurred 2
+Received the Retransmitted String  
+Received tw
+Do you want to report error (1-yes, 0-no)0
+Received orks4567
+Do you want to report error (1-yes, 0-no)0
+[net113@linuxlab ~]$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESULT:
+Thus a C program to implement the concept of sliding window is executed successfully.
+

@@ -1,0 +1,23 @@
+Output:
+Client
+nn@linuxmint ~ $ gcc ftptcpc.c -o client
+nn@linuxmint ~ $ ./client
+Enter the name of the file : ftp.txt
+The contents of the file: 
+FTP: the file transfer protocol
+transfers file to/from remote host
+client/server model
+nn@linuxmint ~ $ 
+Server
+nn@linuxmint ~ $ gcc ftptcps.c -o server
+nn@linuxmint ~ $ ./server
+The requested file from the client is  ftp.txt.
+The contents of the file: 
+FTP: the file transfer protocol
+transfers file to/from remote host
+client/server model
+ftp.txt
+FTP: the file transfer protocol
+transfers file to/from remote host
+client/server model
+Result: Thus a C program to implement File transfer using TCP is done and verified successfully	

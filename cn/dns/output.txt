@@ -1,0 +1,19 @@
+OUTPUT	DNS CLIENT
+[net113@linuxlab ~]$ vi file.txt
+[net113@linuxlab ~]$ gcc -o dc dnsc.c
+[net113@linuxlab ~]$ ./dc 7766 localhost
+
+Socket successfully created
+Enter the domain name www.yahoo.com
+Server's message: The IP address is 172.56.54.2
+
+Enter the domain name www.gmail.com
+Server's message: The IP address is 172.62.2.54
+
+Enter the domain name stop
+
+
+
+RESULT:
+Thus a C program to implement the concept of DNS is executed successfully.
+

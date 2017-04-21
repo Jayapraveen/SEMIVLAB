@@ -1,0 +1,21 @@
+10.	// File to be transfered: mybtech.txt 
+
+Output: 
+
+Terminal 1: (Client)
+nn@linuxmint ~ $ gcc ftpudpc.c -o client
+nn@linuxmint ~ $ ./client
+Enter the name of the file: mybtech.txt
+Enter a name to save: test.txt
+
+Downloading...
+File downloaded successfully...
+nn@linuxmint ~ $ 
+Terminal 2: (Server)
+nn@linuxmint ~ $ gcc ftpudps.c -o server
+nn@linuxmint ~ $ ./server
+nn@linuxmint ~ $ 
+
+Result:
+
+Thus a C program to implement File transfer using UDP is done and verified successfully	

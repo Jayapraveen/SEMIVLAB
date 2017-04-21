@@ -1,0 +1,7 @@
+OUTPUT:
+[root@localhost  ~]# ./a.out 172.16.8.40
+IP address 172.16.8.40 is mapped to MAC address 00:02:b6:42:88:1c
+
+
+
+RESULT: Thus a C program to implement PING is executed successfully
